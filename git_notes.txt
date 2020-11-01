@@ -1,0 +1,241 @@
+
+
+### Git notes####
+
+### a few definitions ##
+Git is a command line program which allows you to track versions
+of any code or plain text documents that you create.
+
+If a critical file gets deleted by accident, or if you make a breaking 
+change to your code and you want to try to figure out where the breaking change was made, you can use Git to restore the deleted file or
+find the new bug in your program
+
+Repository : Git organizes groups of files that you’re tracking into a
+repository, which is just a directory where all of the changes to files in that directory are tracked.
+
+github : GitHub is a website that provides remote Git repositories.
+ A remote repository is just a Git repository that you’re able to access over an internet connection.
+
+## uses ##
+
+like the “track changes” feature of a word processor 
+
+Easy to keep track of time and date of the changes.
+Can use git to restore previous versions of the changes
+can help in collobarating with others.
+
+## Setting up git and github ###
+
+git version --
+
+git config --global user.name "myUserName"
+git config --global user.email myName@email.com
+
+## To check the settings
+
+git config --list
+
+#### Basic git commands
+
+## staging : the stage between tracking and commit
+
+
+## we need to create a directory for our repository
+## after creating the repo, move into the folder and then init.
+
+git init : initiate a  empty git repository in order to track the files in it.
+git status : get information about the status of this repository.
+git add  : 	git add
+git rm --cached readme.txt : unstage a file/remove tracking
+git status : status will now show as untracked
+
+## start again to move on to cooler features ## 
+
+git add:
+git status:
+git commit -m "added readme.txt" : A commit logs the content of all of the currently staged files
+git status : nothing to commit 
+git add -A :   if we want to track all of the changes to all of the files in our directory
+git reset --soft HEAD~ : undo most recent commit
+
+## Summary ##
+
+Git tracks changes to plain text files (code files and text documents).
+A directory where changes to files are tracked by Git is called a Git repository.
+Change your working directory, then run git init to start a repository.
+You can track changes to a file using git add [names of files].
+You can create a milestone about the state of your files using git commit -m "message about changes since the last commit".
+To examine the state of files in your repository use git status.
+
+
+
+## Summary ##
+## Branching
+
+Git branching allows you and others to work on the same code base together.
+You can create a branch with the command git branch [name of branch].
+To switch to a branch use git checkout [name of branch].
+You can combine a branch with your current branch by using git merge.
+
+
+
+Branching is one of the most powerful features that Git offers. Creating different Git branches allows you to work on a 
+particular feature or set of files independently  from other “copies” of a repository.
+
+
+git branch
+- *master 
+(*) indicates which branch we are currently on
+
+-Usually people use this branch as the working version of the software that they are writing, while they develop new and potentially unstable features on other branches.
+
+# creating a new branch
+-- git branch my_new_feature
+
+# command to make the branch the current branch
+-- git checkout my_new_feature
+
+-- git checkout master (switch back to main branch)
+
+
+# command to delete the branch
+git branch -d my_new_feature (-d flag with git branch)
+
+
+# command to create a new branch 
+git checkout -b update-readme
+
+
+
+# Note
+## Do  not forget to add and commit new changes
+
+
+
+## Command to merge master branch with new branch#
+git merge _branch_name
+
+
+# Branching is part of what makes Git so powerful since it enables parallel developments on the same code base 
+:
+Git branching allows you and others to work on the same code base together.
+You can create a branch with the command git branch [name of branch].
+To switch to a branch use git checkout [name of branch].
+You can combine a branch with your current branch by using git merge.
+
+
+
+
+
+
+
+
+
+
+
+## Important git features ##
+git help [name of command] : to get help with the man pages
+git logs : to check the various commits that have been made;
+git diff : show the differences between unstaged changes to your files compared to the last commit.
+git ignore : echo "*.jpg" > .gitignore
+
+
+## Summary #
+
+git help allows you to read the man pages for specific Git commands.
+git log will show you your commit history.
+git diff displays what has changed between the last commit and your current untracked changes.
+You can specify a .gitignore file in order to tell Git not to track certain files.
+
+
+
+
+
+
+### Git and GitHub
+
+--
+A remote Git repository is just  	
+, so it can act as a central point where we can share and sync our changes to files with our friends and colleagues
+
+
+## 
+Firt create a new repository in github
+move to local repository in the system
+
+## remote origin
+git remote add name_of_repo git_remote_url
+
+#git remote
+gives name of the remote repository
+
+## git push
+A Git push updates a remote repository with all of the commits that we’ve made to our local Git repository.
+
+## firts git push : a bit different
+git push -u origin master
+
+
+##  Pull request 
+- A pull request is like a guided git merge that is facilitated by GitHub
+
+
+## push changes from brach to repository
+git push origin branch_name
+
+
+
+
+## Beautiful way to keep track of changes; add, commit, push, pull;
+
+## Summary
+
+You can use GitHub to create and host remote Git repositories.
+A remote Git repository is a Git repository that is always connected to the internet.
+List remote repositories with git remote.
+Add remote repositories with git remote add [name-of-remote] https://github.com/[username]/[repo-name].git
+Add commits to your remote repository with git push [name-of-remote] [name-of-branch] or just git push if you’ve set up a default remote and branch.
+To merge commits on a remote repository into your local repository use git pull [name-of-remote] [name-of-branch] or just git pull if you’ve set up a default remote and branch.
+A pull request allows you to interactively compare two different branches before you merge them.
+GitHub Pages allows you to host websites written in Markdown for free!
+Forking a repository allows you to make changes to a copy of a public repository. You can then open a pull request if you think your changes should be merged into the upstream repository!
+
+
+
+
+
+
+
+
+## Lowdown on markdown
+
+Pound signs (#, ##) make headings.
+A word surrounded by single asterisks (*word*) makes that word italicized.
+A word surrounded by double asterisks (**word**) makes that word bold.
+You can create lists with hyphens (-) or numbers (1., 2., 3.).
+Code can be placed in the middle of a line with single backticks (`code`).
+A code block can be created by putting code in between a set of triple backticks (```).
+You can insert a link with brackets and parentheses ([Link text here](http://jhu.edu)).
+You can use an image with an exclamation point, and a link to an image (![Alt text here](http://jhu.edu/jeff.jpg))
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
