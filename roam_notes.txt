@@ -1,0 +1,23 @@
+- daiy notes : brain dump to link to rest of database
+
+-  graph : connnection or nodes to other pages in database
+
+* : get that page on terminal
+filter : check this later
+new page ; creates page if not there using filter
+
+
+
+
+
+## subscribe for youtube without ads ??
+
+shift + enter : soft line break ; add new txt without bullet
+
+cntrl + shift + v ; bullet formatting :  keeps same formatting as original for all lines
+
+for multiline ; #[[page name]] to link everything
+
+## how to link to a page :
+
+ Indent beneath the page; or use page name with backlinks or hash tag
